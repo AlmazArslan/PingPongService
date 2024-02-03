@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
+#include <string>
 #include <chrono>
 #include <arpa/inet.h>
 #include <sys/socket.h>
@@ -13,6 +14,7 @@
 
 #define BUFFER_SIZE 1024
 #define CLOSE_COMMAND "CLOSE_SESSION"
+#define DATA_COMMAND "GET_DATA"
 #define PING_MSG "PING"
 
 typedef std::chrono::time_point<std::chrono::system_clock> timeType;
