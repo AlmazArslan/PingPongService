@@ -1,4 +1,3 @@
-
 #include "main.hpp"
 
 using ms = std::chrono::duration<int, std::milli>;
@@ -36,11 +35,9 @@ int main(int argc, char const* argv[])
 		printf("Socket creation error \n");
 		return -1;
 	}
-
 	PORT = atoi(argv[2]);
 	serv_addr.sin_family = AF_INET;
 	serv_addr.sin_port = htons(PORT);
-
 	status = inet_pton(AF_INET, argv[1], &serv_addr.sin_addr);
 	if (status <= 0) {
 		printf("Invalid address/ Address not supported \n");
@@ -54,7 +51,6 @@ int main(int argc, char const* argv[])
 	}
 
 	lastPing = std::chrono::system_clock::now();
-
 	printf("Start main_loop \n");
 	while (strcmp(buffer, CLOSE_COMMAND) != 0)
 	{
