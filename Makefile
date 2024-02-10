@@ -1,6 +1,8 @@
 NAME = PingPong
 
-SRC = main.cpp
+SRC = main.cpp \
+	connection.cpp \
+	command.cpp
 HDR = -I.
 LINK = -lpthread
 
